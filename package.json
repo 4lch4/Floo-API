@@ -13,9 +13,10 @@
     "build:watch": "tsc --watch"
   },
   "keywords": [
+    "notifications",
+    "floo",
     "koa",
     "api",
-    "template",
     "koa-router",
     "koa-body",
     "koa-helmet"
@@ -23,7 +24,7 @@
   "author": {
     "name": "4lch4",
     "email": "hey@4lch4.email",
-    "url": "https://alcha.org"
+    "url": "https://4lch4.com"
   },
   "license": "MIT",
   "dependencies": {
