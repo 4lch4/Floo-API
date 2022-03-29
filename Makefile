@@ -70,7 +70,6 @@ start: build
 	@docker run -d --name $(APP_NAME) -p $(APP_PORT):$(APP_PORT) \
 		-e API_PREFIX=$(API_PREFIX) \
 		$(IMAGE_NAME)
-	@docker logs -f $(APP_NAME)
 
 # Stop the container using Docker Compose.
 stop:
