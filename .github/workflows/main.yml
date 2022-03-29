@@ -11,7 +11,6 @@ on:
 
 env:
   IMAGE_TAG_LATEST: "4lch4/floo-api:latest"
-  IMAGE_TAG_DATED: "4lch4/floo-api:$(date +%Y%m%d%.H%M%S)"
 
 jobs:
   publish-to-docker-hub:
@@ -28,7 +27,7 @@ jobs:
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
 
       - name: Build the Docker image
-        run: docker build -t $IMAGE_TAG_LATEST -t $IMAGE_TAG_DATED .
+        run: docker build -t $IMAGE_TAG_LATEST -t 4lch4/floo-api:$(date +%Y%m%d%.H%M%S) .
 
   publish-to-gh-cr:
     name: Build & Publish Image to GitHub Container Registry (GHCR)
@@ -45,7 +44,7 @@ jobs:
           password: ${{ secrets.GHCR_TOKEN }}
 
       - name: Build the Docker image
-        run: docker build -t $IMAGE_TAG_LATEST -t $IMAGE_TAG_DATED .
+        run: docker build -t $IMAGE_TAG_LATEST -t 4lch4/floo-api:$(date +%Y%m%d%.H%M%S) .
 
   publish-to-docr:
     name: Build & Publish Image to DigitalOcean Container Registry (DOCR)
@@ -67,6 +66,6 @@ jobs:
 
       - name: Tag Image
         run:
-          docker tag $IMAGE_TAG_DATED \
+          docker tag 4lch4/floo-api:$(date +%Y%m%d%.H%M%S) \
           registry.digitalocean.com/AISCR/floo-api:latest \
           registry.digitalocean.com/AISCR/floo-api:$(date +%Y%m%d%.H%M%S)
