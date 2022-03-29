@@ -9,10 +9,10 @@
   dependencies:
     koa "^2.13.1"
 
-"@4lch4/koa-router-printer@^1.4.2":
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/@4lch4/koa-router-printer/-/koa-router-printer-1.4.2.tgz#4bc34d2c9cd580f550004c4ce37cc0b6a20ff417"
-  integrity sha512-fHwMxvV0/9DtPARlOYfmNH2kYnHguVtToNjBTNNpw0pkiXVWAQUPP1dV/MaiKfoCojrN5lImNo+xtvqDXKiwvg==
+"@4lch4/koa-router-printer@^1.4.3":
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/@4lch4/koa-router-printer/-/koa-router-printer-1.4.3.tgz#db43b10385eff9486e9aaa00af447b283b8d580f"
+  integrity sha512-dtgmtN1Yg/5X8airaEWj3ATi0ZF1dORITXLY9TgxEReDP5p7MyhtuzEZR7urZRfTPjTPRD71ylqVuuW1s2vv1w==
   dependencies:
     "@4lch4/koa-oto" "1.3.0"
     "@koa/router" "^10.1.1"
