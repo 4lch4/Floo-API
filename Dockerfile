@@ -1,4 +1,4 @@
-FROM node:17-alpine
+FROM node:19-alpine
 
 LABEL org.opencontainers.image.source="https://github.com/4lch4/Floo-API"
 
